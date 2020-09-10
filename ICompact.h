@@ -26,10 +26,10 @@ public:
         Iterator& operator=(Iterator const&) = delete;
     };
 
-    static ICompact* createCompact(IVector const* begin, IVector const* end, ILogger* logger = nullptr);
-    static ICompact* _union(ICompact const* comp1, ICompact const* comp2, ILogger* logger = nullptr);
-    static ICompact* convex(ICompact const* comp1, ICompact const* comp2, ILogger* logger = nullptr);
-    static ICompact* intersection(ICompact const* comp1, ICompact const* comp2, ILogger* logger = nullptr);
+    static ICompact* createCompact(IVector const* begin, IVector const* end, double tolerance, ILogger* logger = nullptr);
+    static ICompact* _union(ICompact const* comp1, ICompact const* comp2, double tolerance, ILogger* logger = nullptr);
+    static ICompact* convex(ICompact const* comp1, ICompact const* comp2, double tolerance, ILogger* logger = nullptr);
+    static ICompact* intersection(ICompact const* comp1, ICompact const* comp2, double tolerance, ILogger* logger = nullptr);
 
     virtual Iterator* begin(IVector const* step = nullptr) = 0;
     virtual Iterator* end(IVector const* step = nullptr)   = 0;
