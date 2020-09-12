@@ -31,8 +31,8 @@ public:
     static ICompact* convex(ICompact const* comp1, ICompact const* comp2, double tolerance, ILogger* logger = nullptr);
     static ICompact* intersection(ICompact const* comp1, ICompact const* comp2, double tolerance, ILogger* logger = nullptr);
 
-    virtual Iterator* begin(IVector const* step = nullptr) = 0;
-    virtual Iterator* end(IVector const* step = nullptr)   = 0;
+    virtual Iterator* begin(IVector const* step) = 0;
+    virtual Iterator* end(IVector const* step)   = 0;
 
     virtual ICompact* clone()                                         const = 0;
     virtual IVector* getBegin()                                       const = 0;
