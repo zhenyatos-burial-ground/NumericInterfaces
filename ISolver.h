@@ -8,7 +8,6 @@
 #include "../../Vector/include/IVector.h"
 #include "../../Compact/include/ICompact.h"
 #include "../../Problem/include/IProblem.h"
-#include <string>  // string
 
 class DECLSPEC ISolver {
 public:
@@ -20,7 +19,7 @@ public:
     // so the method of setting parameters with std::string
     // will not be used and may be implemented as dummy.
     // NOTE: set problem at first, then all the other stuff
-    virtual ReturnCode setParams(std::string const& params)             = 0;
+    virtual ReturnCode setParams(char const* params)             		= 0;
     virtual ReturnCode setParams(IVector const* params)                 = 0;
     virtual ReturnCode setProblemParams(IVector const* problemParams)   = 0;
     virtual ReturnCode setCompact(ICompact const* compact)              = 0;
